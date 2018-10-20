@@ -1,6 +1,10 @@
-package com.ecpay.qr;
+package com.ecpay;
 
 import com.ecpay.ex.QRException;
+import com.ecpay.qr.ADFTPackager;
+import com.ecpay.qr.EPackager;
+import com.ecpay.qr.MAIPackager;
+import com.ecpay.qr.QRMsg;
 
 /**
  * Created by Joe on October, 18 2018 .

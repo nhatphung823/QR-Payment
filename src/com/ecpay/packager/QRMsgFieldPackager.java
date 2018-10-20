@@ -27,14 +27,10 @@ public class QRMsgFieldPackager extends QRFieldPackager {
   public int unpack(QRComponent c, String s) throws QRException {
     int index = Integer.parseInt(s.substring(0, 2));
     int length = Integer.parseInt(s.substring(2, 4));
-//    System.out.println("index : " + index);
-//    System.out.println("length : " + length);
-//    System.out.println("data : " + s.substring(4, length));
     String data = s.substring(4, 4 + length);
     QRMsg msg = new QRMsg(index, msgPackager);
     msgPackager.unpack(msg, data);
     ((QRMsg) c).set(msg);
-//    System.out.println("ccc : " + msg.pack());
     return length + 4;
   }
 }

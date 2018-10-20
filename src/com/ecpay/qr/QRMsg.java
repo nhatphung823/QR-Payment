@@ -190,7 +190,7 @@ public class QRMsg extends QRComponent implements Cloneable, Serializable {
   String getTabs(int deep) {
     String s = "";
     for (int i = 0; i < deep; i++) {
-      s = s + "\t";
+      s += "\t";
     }
     return s;
   }

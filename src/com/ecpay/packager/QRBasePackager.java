@@ -52,11 +52,9 @@ public abstract class QRBasePackager implements QRPackager {
       try {
         int index = Integer.parseInt(temp.substring(0, 2));
         QRFieldPackager field = fld[index];
-//        System.out.println(index + " : field : " + field + " : " + this.getClass());
         int pos = field.unpack(m, temp);
         temp = temp.substring(pos, temp.length());
         consumed += pos;
-//        System.out.println("temp : " + temp);
       } catch (NumberFormatException nfe) {
         throw new QRException(getStackTraceException(nfe));
       }
